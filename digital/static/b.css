@@ -654,7 +654,7 @@ textarea.input-field {
 }
 
 .contact-item { min-width: 100%; }
-
+/* 
 .contact-card {
   background-color: var(--white-1);
   padding: 20px;
@@ -663,7 +663,7 @@ textarea.input-field {
   display: flex;
   align-items: flex-start;
   gap: 15px;
-}
+} */
 
 .contact-card .card-icon {
   background-color: var(--cultured-2);
@@ -673,11 +673,11 @@ textarea.input-field {
   border-radius: 50%;
   transition: var(--transition-1);
 }
-
+/* 
 .contact-card:is(:hover, :focus) .card-icon {
   background-color: var(--red-crayola);
   color: var(--white-1);
-}
+} */
 
 .contact-card .card-title { margin-block-end: 5px; }
 
@@ -687,7 +687,6 @@ textarea.input-field {
 }
 
 .contact-card .card-link:is(:hover, :focus) { color: var(--red-crayola); }
-
 
 
 
