@@ -186,20 +186,16 @@ body {
 }
 
 .btn-primary {
-  background-image: var(--gradient);
-  background-size: 1000%;
-}
+ background-color: #B62088;}
 
-.btn-primary:is(:hover, :focus) { background-position: bottom right; }
+.btn-primary:is(:hover, :focus) { background-color: #7350A6; }
 
 .btn-secondary {
-  background-color: var(--white-1);
-  color: var(--eerie-black);
+  background-color: black;
 }
 
 .btn-secondary:is(:hover, :focus) {
-  background-color: var(--eerie-black);
-  color: var(--white-1);
+  background-color: #7350A6;
 }
 
 .section { padding-block: var(--section-padding); }
