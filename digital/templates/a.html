@@ -656,13 +656,13 @@
             Reach out today to discuss how we can help your brand grow with tailored digital marketing solutions. Let’s connect!
           </p>
 
-          <form action="" class="contact-form">
-
+          <form method="POST" action="{% url 'submit' %}" class="contact-form">
+          {% csrf_token %}
+          
             <div class="input-wrapper">
               <input type="text" name="name" aria-label="name" placeholder="Your name*" required class="input-field">
 
-              <input type="email" name="email_address" aria-label="email" placeholder="Email address*" required
-                class="input-field">
+              <input type="email" name="email" placeholder="Email address*" required class="input-field">
             </div>
 
             <div class="input-wrapper">
