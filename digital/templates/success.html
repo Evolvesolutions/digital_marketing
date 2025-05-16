@@ -1,1 +1,80 @@
-<h1>M*******F********R</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Success</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style> 
+
+body {
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#7350A6;
+}
+
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-box {
+  background-color:aliceblue;
+;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.checkmark {
+  font-size: 60px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #333;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #B62088;
+}
+</style>
+<body>
+
+  <div class="success-container">
+    <div class="success-box">
+      <div class="checkmark">✔</div>
+      <h1>Success!</h1>
+      <p>Your action was completed successfully.</p>
+      <a href="{% url 'home' %}" class="btn">Go Back Home</a>
+    </div>
+  </div>
+
+</body>
+</html>
