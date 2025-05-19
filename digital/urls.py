@@ -7,5 +7,13 @@ urlpatterns = [
 
     path('registration-success/', views.registration_success, name='registration_success'),
 
+
+
+
+
+
+    path('digital/', views.index, name='index'),
+
+
 ]
 

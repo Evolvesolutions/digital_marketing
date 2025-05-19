@@ -32,5 +32,11 @@ def success(request):
 
 
 
+def index(request):
+    return render(request, 'index.html')  # ← Ensure it's 'index.html'
+
+
+
+
 
 
