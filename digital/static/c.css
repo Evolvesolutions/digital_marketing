@@ -186,20 +186,16 @@ body {
 }
 
 .btn-primary {
-  background-image: var(--gradient);
-  background-size: 1000%;
-}
+ background-color: #B62088;}
 
-.btn-primary:is(:hover, :focus) { background-position: bottom right; }
+.btn-primary:is(:hover, :focus) { background-color: #7350A6; }
 
 .btn-secondary {
-  background-color: var(--white-1);
-  color: var(--eerie-black);
+  background-color: black;
 }
 
 .btn-secondary:is(:hover, :focus) {
-  background-color: var(--eerie-black);
-  color: var(--white-1);
+  background-color: #7350A6;
 }
 
 .section { padding-block: var(--section-padding); }
@@ -658,7 +654,7 @@ textarea.input-field {
 }
 
 .contact-item { min-width: 100%; }
-
+/* 
 .contact-card {
   background-color: var(--white-1);
   padding: 20px;
@@ -667,9 +663,9 @@ textarea.input-field {
   display: flex;
   align-items: flex-start;
   gap: 15px;
-}
+} */
 
-.contact-card .card-icon {
+.card-icon {
   background-color: var(--cultured-2);
   color: var(--red-crayola);
   font-size: 25px;
@@ -677,11 +673,11 @@ textarea.input-field {
   border-radius: 50%;
   transition: var(--transition-1);
 }
-
+/* 
 .contact-card:is(:hover, :focus) .card-icon {
   background-color: var(--red-crayola);
   color: var(--white-1);
-}
+} */
 
 .contact-card .card-title { margin-block-end: 5px; }
 
@@ -691,6 +687,13 @@ textarea.input-field {
 }
 
 .contact-card .card-link:is(:hover, :focus) { color: var(--red-crayola); }
+
+.card-content .address:hover {
+  color: var(--red-crayola);
+}
+
+
+
 
 
 
@@ -716,36 +719,60 @@ textarea.input-field {
   display: inline-block;
 }
 
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
+.social-links {
+  display: flex;
+  gap: 15px;
+}
 
+.social-icon {
+  color: #0d0c0c;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-/*-----------------------------------*\
-  #BACK TO TOP
-\*-----------------------------------*/
+.social-icon:hover {
+  color: #FA004F;
+}
 
-.back-top-btn {
+.floating-social {
   position: fixed;
-  bottom: 10px;
-  right: 20px;
-  background-color: var(--eerie-black);
-  color: var(--white-1);
-  padding: 12px;
+  bottom: 20px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.floating-social a {
+  background-color: #212121;
+  color: #25D366; /* WhatsApp green by default */
+  font-size: 28px;
+  padding: 10px;
   border-radius: 50%;
-  box-shadow: var(--shadow-2);
-  z-index: 4;
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition-1);
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background-color 0.3s;
 }
 
-.back-top-btn.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-10px);
+.floating-social a.instagram {
+  color: #E4405F; /* Instagram pink */
 }
 
-.back-top-btn:is(:hover, :focus) { opacity: 0.9; }
+.floating-social a:hover {
+  transform: scale(1.1);
+  background-color: #B62088;
+}
+
+
 
 
 

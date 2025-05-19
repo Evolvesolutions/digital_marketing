@@ -21,3 +21,8 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+    # path("",views.home, name="home"),
+    # path('submit/', views.submit, name='submit'),
+
+    # path('registration-success/', views.registration_success, name='registration_success'),
+

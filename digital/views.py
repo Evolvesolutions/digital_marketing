@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from .models import BlogPost
 from django.shortcuts import render, redirect
 # from .forms import BlogPostForm
+from django.shortcuts import render, redirect
+from .models import contactform
+from .forms import contact  
 
 def home(request):
     return render(request, "a.html")
@@ -36,6 +39,10 @@ def blog_detail(request, slug):
 def home(request):
     latest_blogs = BlogPost.objects.filter(published=True).order_by('-created_at')[:4]  # show latest 3
     return render(request, "a.html", {'posts': latest_blogs})
+def success(request):
+    return render(request, 'success.html')
+
+
 
 
 

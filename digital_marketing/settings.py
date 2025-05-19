@@ -49,9 +49,10 @@ WSGI_APPLICATION = "digital_marketing.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",   # path to the database file
     }
 }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

@@ -698,7 +698,7 @@
 /* ─── END BLOG STYLES ─── */
 </style>
 
-<!-- <section class="section blog" id="blog" aria-label="blog">
+ <section class="section blog" id="blog" aria-label="blog">
   <div class="container">
     <h2 class="h2 section-title">Latest Articles Updated Weekly</h2>
     <p class="section-text">
@@ -709,29 +709,38 @@
       {% for blog in posts %}
       <li>
         <div class="blog-card">
-          <figure class="card-banner">
-            <a href="{% url 'blog_detail' slug=blog.slug %}">            </a>
+          <figure class="card-banner img-holder">
+            <a href="{% url 'blog_detail' slug=blog.slug %}">
+              {% if blog.image %}
+                <img src="{{ blog.image.url }}" loading="lazy" alt="{{ blog.title }}" class="img-cover">
+              {% else %}
+                <!-- fallback image -->
+                <img src="{% static 'images/placeholder.jpg' %}" loading="lazy"
+                    alt="No image available" class="img-cover">
+              {% endif %}
+            </a>
           </figure>
 
           <div class="card-content">
-            <time class="time">{{ blog.created_at|date:"F d, Y" }}</time>
-
+            <time class="time">{{ blog.date }}</time>
             <h3 class="h3">
-              <a href="{% url 'blog_detail' slug=blog.slug %}" class="card-title">{{ blog.title }}</a>
+              <a href="{% url 'blog_detail' slug=blog.slug %}" class="card-title">
+                {{ blog.title }}
+              </a>
             </h3>
-
-            <a href="{% url 'blog_detail' slug=blog.slug %}" class="btn btn-primary">Read More</a>
+            <a href="{% url 'blog_detail' slug=blog.slug %}" class="btn btn-primary" style="margin-top:10px;">Read More</a>
           </div>
         </div>
       </li>
       {% endfor %}
+
     </ul>
 
     <div style="text-align:center; margin-top:30px;">
       <a href="{% url 'blog_list' %}" class="btn btn-secondary">See All Blogs</a>
     </div>
   </div>
-</section> -->
+</section> 
 
 
 <!-- Blog Section -->
@@ -743,17 +752,16 @@
     </p>
 
     <ul class="grid-list">
-    {% for blog in posts %}
+      {% for blog in posts %}
     <li>
       <div class="blog-card">
         <figure class="card-banner img-holder">
           <a href="{% url 'blog_detail' slug=blog.slug %}">
             {% if blog.image %}
-              <img src="{{ blog.image.url }}" loading="lazy" alt="{{ blog.title }}" class="img-cover">
+              <img src="{{ blog.image.url }}" loading="lazy" alt="{{ blog.title }}">
             {% else %}
-              <!-- fallback image -->
-              <img src="{% static 'images/placeholder.jpg' %}" loading="lazy"
-                  alt="No image available" class="img-cover">
+              {# fallback picture or leave blank #}
+              <img src="{% static 'images/placeholder.jpg' %}" loading="lazy" alt="No image">
             {% endif %}
           </a>
         </figure>
