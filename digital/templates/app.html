@@ -1,0 +1,149 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafa;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background: linear-gradient(135deg, #000000, #000000);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .image-wrapper {
+    text-align: center;
+    }
+    .card img.icon {
+      width: 800px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #0aa98d;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+      color: #333;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .cta-button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: linear-gradient(135deg, #ee0979, #ff6a00);
+    }
+
+    .image-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .image-section img {
+      width: 20%;
+      max-width: 1500px;
+      border-radius: 12px;
+    }
+    footer {
+      background-color: #0cc3aa;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 5px solid #00b894;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>App Development Services</h1>
+    <p>Design Intuitively. Perform Seamlessly. Scale Effortlessly.</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+        <div class="image-wrapper">
+            <img src="{% static 'images/app.png' %}" alt="SEO Icon" class="icon">
+        </div>
+       
+      <!-- Replace 'your-icon-path.png' with your own image/logo path -->
+
+      <h2>What is App Development?</h2>
+      <p>
+        App Development focuses on creating mobile applications that deliver smooth user experiences and solve real problems. Whether it’s iOS, Android, or cross-platform, we turn ideas into apps that people love to use.
+      </p>
+
+      <h2>Our Key App Development Services</h2>
+      <ul>
+        <li>📱 iOS & Android App Development</li>
+        <li>🔁 Cross-Platform Apps (Flutter, React Native)</li>
+        <li>🧩 API Integration & Backend Services</li>
+        <li>🧪 UI/UX Design for Mobile Interfaces</li>
+        <li>🚀 App Store Deployment & Maintenance</li>
+        <li>🔒 App Security & Performance Tuning</li>
+      </ul>
+
+      <h2>Why Choose Us?</h2>
+      <p>
+        We develop apps that are fast, functional, and future-ready. Our team focuses on user-centric design and robust performance to give your users the best mobile experience. From concept to launch, we handle everything.
+    </p>
+
+      <button class="cta-button">Claim Your Free App Usability Check</button>
+    </div>
+
+    <div class="image-section">
+      <!-- <img src="your-image-path.jpg" alt="SEO Strategy Image"> -->
+      <!-- Replace 'your-image-path.jpg' with your banner/graphic path -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 evolve | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

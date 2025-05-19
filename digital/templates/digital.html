@@ -1,0 +1,149 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafa;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background: linear-gradient(135deg, #000000, #000000);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .image-wrapper {
+    text-align: center;
+    }
+    .card img.icon {
+      width: 800px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #0aa98d;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+      color: #333;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .cta-button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: linear-gradient(135deg, #ee0979, #ff6a00);
+    }
+
+    .image-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .image-section img {
+      width: 20%;
+      max-width: 1500px;
+      border-radius: 12px;
+    }
+    footer {
+      background-color: #0cc3aa;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 5px solid #00b894;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Digital Marketing services</h1>
+    <p>Engage More. Convert Better. Scale Smarter.</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+        <div class="image-wrapper">
+            <img src="{% static 'images/Digi.png' %}" alt="SEO Icon" class="icon">
+        </div>
+       
+      <!-- Replace 'your-icon-path.png' with your own image/logo path -->
+
+      <h2>What is Digital Marketing?</h2>
+      <p>
+        Digital Marketing is the art and science of promoting your business online using channels like search engines, social media, email, and paid ads. It helps you reach the right people, at the right time, with the right message—driving traffic, leads, and sales.
+      </p>
+
+      <h2>Our Key Digital Marketing Services</h2>
+      <ul>
+        <li>📣 Social Media Marketing & Strategy</li>
+        <li>📈 Performance-Based Google & Meta Ads</li>
+        <li>✉️ Targeted Email Campaigns</li>
+        <li>🛍️ E-commerce Marketing & Conversion Optimization</li>
+        <li>🎯 Audience Targeting & Retargeting</li>
+        <li>📊 Analytics, Insights & ROI Tracking</li>
+      </ul>
+
+      <h2>Why Choose Us?</h2>
+      <p>
+        We craft custom digital strategies tailored to your business goals. From brand awareness to lead generation, our team uses data-driven insights and creative storytelling to deliver results that matter. We're not just marketers—we're growth partners.
+    </p>
+
+      <button class="cta-button">Get Free Marketing Consultation</button>
+    </div>
+
+    <div class="image-section">
+      <!-- <img src="your-image-path.jpg" alt="SEO Strategy Image"> -->
+      <!-- Replace 'your-image-path.jpg' with your banner/graphic path -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 evolve | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
