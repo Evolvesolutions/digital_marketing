@@ -143,10 +143,21 @@
                 <h3 class="h3">
                   <a href="#" class="card-title">SEO Optimization</a>
                 </h3>
+                <style>
+                  .service-card .btn-wrapper {
+                  display: flex;
+                  justify-content: center;
+                  margin-top: 15px;
+                  }
+                </style>
 
                 <p class="card-text">
                   We optimize your website with targeted keywords, quality content, and technical SEO to improve search rankings and drive organic traffic.
                 </p>
+                <!-- Center the button -->
+                <div class="btn-wrapper">
+                  <a href="{% url 'seo' %}" class="btn btn-primary">View Details</a>
+                </div>
 
               </div>
             </li>
@@ -165,6 +176,9 @@
                 <p class="card-text">
                   We create tailored digital strategies using SEO, social media, and ads to grow your brand and effectively reach the right audience.
                 </p>
+                <div class="btn-wrapper">
+                  <a href="{% url 'digital' %}" class="btn btn-primary">View Details</a>
+                </div>
 
               </div>
             </li>
@@ -183,6 +197,9 @@
                 <p class="card-text">
                   Unlock the power of your marketing data! I help businesses track, analyze, and optimize their campaigns using data-driven insights.
                 </p>
+                <div class="btn-wrapper">
+                  <a href="{% url 'data' %}" class="btn btn-primary">View Details</a>
+                </div>
 
               </div>
             </li>
@@ -195,12 +212,15 @@
                 </div>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Content writing</a>
+                  <a href="#" class="card-title">Web Development</a>
                 </h3>
 
                 <p class="card-text">
-                  Unlock your potential with expert guidance, innovative tools, and real results—achieve your goals through knowledge, passion, and persistence.
+                  Build your future with custom websites, smart solutions, and seamless UX—grow your brand through design, speed, and innovation.
                 </p>
+                <div class="btn-wrapper">
+                  <a href="{% url 'web' %}" class="btn btn-primary">View Details</a>
+                </div>
 
               </div>
             </li>
@@ -213,12 +233,15 @@
                 </div>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Email Marketing</a>
+                  <a href="#" class="card-title">App Development</a>
                 </h3>
 
                 <p class="card-text">
-                  We design and run engaging email campaigns that connect, convert, and keep your audience coming back for more.
+                  Build your future with custom solutions, seamless UX, and cutting-edge tech—launch your vision through strategy, creativity, and precision.
                 </p>
+                <div class="btn-wrapper">
+                  <a href="{% url 'app' %}" class="btn btn-primary">View Details</a>
+                </div>
 
               </div>
             </li>
@@ -231,12 +254,14 @@
                 </div>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Marketing & Reporting</a>
+                  <a href="#" class="card-title">Product Management</a>
                 </h3>
 
                 <p class="card-text">
-                  We track campaign performance, provide clear reports, and refine strategies based on real-time data to ensure maximum ROI.
-                </p>
+                  Drive innovation with clear vision, agile methods, and smart execution—deliver success through strategy, leadership, and collaboration.                </p>
+                <div class="btn-wrapper">
+                  <a href="{% url 'product' %}" class="btn btn-primary">View Details</a>
+                </div>
 
               </div>
             </li>
@@ -281,7 +306,8 @@
                     <a href="#" class="card-title">Boost rankings, drive traffic, improve visibility, keyword strategy, technical SEO.</a>
                   </h3>
 
-                  <a href="#" class="btn btn-primary">View Details</a>
+                  
+<!-- <a href="{% url 'seo' %}" class="btn btn-primary">View Details</a> -->
 
                 </div>
 
@@ -304,7 +330,7 @@
                     <a href="#" class="card-title">Targeted campaigns, audience engagement, conversion-driven, social media, online presence.</a>
                   </h3>
 
-                  <a href="#" class="btn btn-primary">View Details</a>
+                  <!-- <a href="#" class="btn btn-primary">View Details</a> -->
 
                 </div>
 
@@ -327,7 +353,7 @@
                     <a href="#" class="card-title">How data analytics uncovers valuable clarity in every decision-making process.</a>
                   </h3>
 
-                  <a href="#" class="btn btn-primary">View Details</a>
+                  <!-- <a href="#" class="btn btn-primary">View Details</a> -->
 
                 </div>
 
@@ -344,13 +370,13 @@
 
                 <div class="card-content">
 
-                  <p class="card-subtitle">Email Marketing</p>
+                  <p class="card-subtitle">Web Development</p>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Personalized emails, automated campaigns, list segmentation, high open rates, conversions.</a>
+                    <a href="#" class="card-title">Responsive design, fast loading, clean code, SEO-ready, security, scalability.</a>
                   </h3>
 
-                  <a href="#" class="btn btn-primary">View Details</a>
+                  <!-- <a href="#" class="btn btn-primary">View Details</a> -->
 
                 </div>
 
@@ -367,13 +393,13 @@
 
                 <div class="card-content">
 
-                  <p class="card-subtitle">Marketing & Reporting</p>
+                  <p class="card-subtitle">App Development</p>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Performance tracking, data analysis, ROI-focused, custom reports, actionable insights.</a>
+                    <a href="#" class="card-title">Custom apps, seamless UX, cross-platform coding, fast performance, user growth, retention.</a>
                   </h3>
 
-                  <a href="#" class="btn btn-primary">View Details</a>
+                  <!-- <a href="#" class="btn btn-primary">View Details</a> -->
 
                 </div>
 
@@ -390,13 +416,13 @@
 
                 <div class="card-content">
 
-                  <p class="card-subtitle">Content Writing</p>
+                  <p class="card-subtitle">Product Management</p>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Engaging copy, SEO-optimized, brand voice, creative, informative, persuasive content.</a>
+                    <a href="#" class="card-title">User research, roadmap planning, agile sprints, cross-functional teams, delivery, impact.</a>
                   </h3>
 
-                  <a href="#" class="btn btn-primary">View Details</a>
+                  <!-- <a href="#" class="btn btn-primary">View Details</a> -->
 
                 </div>
 
@@ -483,158 +509,275 @@
         </div>
       </section>
 
-
-
-
-
-      <!-- 
-        - #CTA
-      -->
-
-        <section class="section cta" aria-label="cta" style='background-image: url("{% static "images/cta-bg.jpg" %}");'>
-        <div class="container">
-
-          <p class="cta-subtitle">So What is Next?</p>
-
-          <h2 class="h2 section-title">Are You Ready? Let's get to Work!</h2>
-
-          <a href="#" class="btn btn-secondary">Get Started</a>
-
-        </div>
-      </section>
-
-
-
-
-
       <!-- 
         - #BLOG
       -->
 
-      <section class="section blog" id="blog" aria-label="blog">
-        <div class="container">
+      <style>
+  .blog {
+    padding: 60px 0;
+  }
 
-          <h2 class="h2 section-title">Latest Articles Updated Weekly</h2>
+  .blog .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
-          <p class="section-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna
-            aliqua.
-          </p>
+  .blog .section-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+  }
 
-          <ul class="grid-list">
+  .blog .section-text {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 
-            <li>
-              <div class="blog-card">
+  .blog .grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0;
+  }
 
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="{% static 'images/blog-1.jpg' %}" width="860" height="646" loading="lazy"
-                    alt="How to Become a Successful Entry Level UX Designer" class="img-cover">
-                </figure>
+  .blog .blog-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-                <div class="card-content">
+  .blog .card-banner {
+    overflow: hidden;
+  }
 
-                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+  .blog .card-banner a {
+    display: block;
+  }
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">How to Become a Successful Entry Level UX Designer</a>
-                  </h3>
+  .blog .img-cover {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
 
-                </div>
+  .blog .card-banner:hover .img-cover {
+    transform: scale(1.05);
+  }
 
-              </div>
-            </li>
+  .blog .card-content {
+    padding: 20px;
+  }
 
-            <li>
-              <div class="blog-card grid">
+  .blog .time {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 5px;
+    display: block;
+  }
 
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="{% static 'images/blog-2.jpg' %}" width="860" height="646" loading="lazy"
-                    alt="2022 Local SEO Success: The Year of Everywhere" class="img-cover">
-                </figure>
+  .blog .h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
 
-                <div class="card-content">
+  .blog .card-title {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+  .blog .card-title:hover {
+    color: #007bff;
+  }
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">2022 Local SEO Success: The Year of Everywhere</a>
-                  </h3>
+  .blog .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-                </div>
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
 
-              </div>
-            </li>
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
 
-            <li>
-              <div class="blog-card grid">
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
 
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="{% static 'images/blog-3.jpg' %}" width="860" height="646" loading="lazy"
-                    alt="The Guide to Running a Client Discovery Process" class="img-cover">
-                </figure>
+  .btn-secondary:hover {
+    background-color: #545b62;
+  }
 
-                <div class="card-content">
+  @media (max-width: 768px) {
+    .blog {
+      padding: 40px 0;
+    }
 
-                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+    .blog .section-title {
+      font-size: 2em;
+    }
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">The Guide to Running a Client Discovery Process</a>
-                  </h3>
+    .blog .grid-list {
+      grid-template-columns: 1fr;
+    }
 
-                </div>
+    .blog .container {
+      padding: 0 15px;
+    }
+  }
+</style>
 
-              </div>
-            </li>
+<!-- CTA Section -->
+<section class="section cta" aria-label="cta" style='background-image: url("{% static "images/cta-bg.jpg" %}")'>
+  <div class="container">
+    <p class="cta-subtitle">So What is Next?</p>
+    <h2 class="h2 section-title">Are You Ready? Let's get to Work!</h2>
+    <a href="#" class="btn btn-secondary">Get Started</a>
+  </div>
+</section>
 
-            <li>
-              <div class="blog-card grid">
+<style>
+/* ───── BLOG SECTION ───── */
+/* .blog        { padding:60px 0; }
+.blog .container { max-width:1200px; margin:0 auto; padding:0 20px; }
 
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="{% static 'images/blog-4.jpg' %}" width="860" height="646" loading="lazy"
-                    alt="3 Ways to Get Client Approval for Scope Changes" class="img-cover">
-                </figure>
+.blog .section-title { font-size:2.5rem; margin:0 0 15px; text-align:center; color:#333; }
+.blog .section-text  { color:#777; line-height:1.6; margin:0 auto 30px; max-width:700px; text-align:center; }
 
-                <div class="card-content">
+.grid-list   { display:grid; gap:30px;
+               grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); padding:0; list-style:none; }
 
-                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+.blog-card   { background:#fff; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,.1);
+               display:flex; flex-direction:column; overflow:hidden; min-height:100%; }
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">3 Ways to Get Client Approval for Scope Changes</a>
-                  </h3>
+.card-banner { flex-shrink:0; }
+.img-cover   { width:100%; height:200px; object-fit:cover; display:block;
+               transition:transform .3s ease; }
+.card-banner:hover .img-cover { transform:scale(1.05); } */
 
-                </div>
+/* .card-content{ padding:20px; display:flex; flex-direction:column; flex:1; } */
+/* .card-content{ padding:20px; }
+.time         { font-size:.9rem; color:#999; margin-bottom:6px; }
+.h3           { font-size:1.4rem; margin:0 0 12px; line-height:1.3; }
+.card-title   { color:#333; text-decoration:none; }
+.card-title:hover { color:#007bff; }
 
-              </div>
-            </li>
+.btn          { padding:10px 20px; border:none; border-radius:5px; text-decoration:none;
+               font-size:1rem; cursor:pointer; transition:background-color .3s; }
+.btn-primary  { background:#007bff; color:#fff;}
+.btn-primary:hover { background:#0056b3; }
+.btn-secondary{ background:#6c757d; color:#fff; }
+.btn-secondary:hover{ background:#545b62; }
 
-            <li>
-              <div class="blog-card grid">
+@media (max-width:768px){
+  .blog        { padding:40px 0; }
+  .section-title{ font-size:2rem; }
+  .grid-list   { grid-template-columns:1fr; }
+  .container   { padding:0 15px; }
+} */
+/* ─── END BLOG STYLES ─── */
+</style>
 
-                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
-                  <img src="{% static 'images/blog-5.jpg' %}" width="860" height="646" loading="lazy"
-                    alt="Top 21 Must-Read Blogs For Creative Agencies" class="img-cover">
-                </figure>
+<!-- <section class="section blog" id="blog" aria-label="blog">
+  <div class="container">
+    <h2 class="h2 section-title">Latest Articles Updated Weekly</h2>
+    <p class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
 
-                <div class="card-content">
+    <ul class="grid-list">
+      {% for blog in posts %}
+      <li>
+        <div class="blog-card">
+          <figure class="card-banner">
+            <a href="{% url 'blog_detail' slug=blog.slug %}">            </a>
+          </figure>
 
-                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+          <div class="card-content">
+            <time class="time">{{ blog.created_at|date:"F d, Y" }}</time>
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Top 21 Must-Read Blogs For Creative Agencies</a>
-                  </h3>
+            <h3 class="h3">
+              <a href="{% url 'blog_detail' slug=blog.slug %}" class="card-title">{{ blog.title }}</a>
+            </h3>
 
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
+            <a href="{% url 'blog_detail' slug=blog.slug %}" class="btn btn-primary">Read More</a>
+          </div>
         </div>
-      </section>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div style="text-align:center; margin-top:30px;">
+      <a href="{% url 'blog_list' %}" class="btn btn-secondary">See All Blogs</a>
+    </div>
+  </div>
+</section> -->
 
 
+<!-- Blog Section -->
+<section class="section blog" id="blog" aria-label="blog">
+  <div class="container">
+    <h2 class="h2 section-title">Latest Articles Updated Weekly</h2>
+    <p class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <ul class="grid-list">
+    {% for blog in posts %}
+    <li>
+      <div class="blog-card">
+        <figure class="card-banner img-holder">
+          <a href="{% url 'blog_detail' slug=blog.slug %}">
+            {% if blog.image %}
+              <img src="{{ blog.image.url }}" loading="lazy" alt="{{ blog.title }}" class="img-cover">
+            {% else %}
+              <!-- fallback image -->
+              <img src="{% static 'images/placeholder.jpg' %}" loading="lazy"
+                  alt="No image available" class="img-cover">
+            {% endif %}
+          </a>
+        </figure>
+
+        <div class="card-content">
+          <time class="time">{{ blog.date }}</time>
+          <h3 class="h3">
+            <a href="{% url 'blog_detail' slug=blog.slug %}" class="card-title">
+              {{ blog.title }}
+            </a>
+          </h3>
+          <a href="{% url 'blog_detail' slug=blog.slug %}" class="btn btn-primary" style="margin-top:10px;">Read More</a>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+
+    </ul>
+
+    <div style="text-align:center; margin-top: 30px;">
+      <a href="{% url 'blog_list' %}" class="btn btn-secondary">See All Blogs</a>
+    </div>
+  </div>
+</section>
 
 
 
@@ -761,7 +904,7 @@
     <div class="container">
 
       <p class="copyright">
-        &copy; 2022 All Rights Reserved by <a href="#" class="copyright-link">evolve</a>
+        &copy; 2025 All Rights Reserved by <a href="#" class="copyright-link">evolve</a>
       </p>
 
     </div>
@@ -793,6 +936,18 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    function showBlogDetail(blogId) {
+      const allDetails = document.querySelectorAll('.blog-detail');
+      allDetails.forEach(detail => detail.classList.remove('active'));
+
+      const selected = document.getElementById(`blog-detail-${blogId}`);
+      if (selected) {
+        selected.classList.add('active');
+        selected.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
 
 </body>
 
