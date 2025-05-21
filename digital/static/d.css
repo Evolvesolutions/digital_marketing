@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+.logo {
+  font-family: 'Arial Black', 'Segoe UI', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(17, 16, 16);
+  cursor: pointer;
+  padding: px 0 ;
+  position:initial;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #282728;
+  color: #faf3fa;
+  padding-top: 80px; /* Push content below fixed navbar */
+  text-align: center;
+}
+
+/* Navbar */
+.header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: #fcf8f8;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(156, 27, 27, 0.05);
+  padding: 5px 0;
+}
+.header {
+  height: 80px; /* or 50px */
+  display: flex;
+  align-items: center; /* Vertically center content */
+}
+
+
+.navbar.container {
+  display: flex;
+  justify-content: space-between; /* Logo left, nav right */
+  align-items:center;
+  padding: 0 20px;
+}
+
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.navbar-link, .btn {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover,
+.btn:hover {
+  color: #c326d8;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color:#c326d8;
+  color: #282728; /* Dark text for light background */
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:is(:hover, :focus) {
+  background-color: #7350A6;
+  color: #ffffff; /* White text on hover */
+  border-color: #7350A6;
+}
+
+
+
+
+
+/* Get Started Button */
+.btn.btn-primary {
+  background-color: #b724ca;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* FOOTER   */
+
+.footer {
+  background-color: #282728;
+  color: #c81010;
+  text-align: center;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icon, .x-logo {
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover, .x-logo:hover {
+  transform: scale(1.2);
+  color: #c326d8; /* hover color */
+}
+
+.x-logo svg {
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.copyright-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.copyright-link:hover {
+  color: #c326d8;
+}
+
+/* Floating WhatsApp & Instagram */
+.floating-social {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.floating-social a {
+  background-color: #c326d8;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.floating-social a:hover {
+  background-color: #a91bc0;
+  transform: scale(1.1);
+}
+

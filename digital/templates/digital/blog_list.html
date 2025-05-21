@@ -1,141 +1,152 @@
-{% load static %}
+  {% load static %}
+              
+  
   <!DOCTYPE html>
+              
   <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolve</title>
+                <head>
+                  <meta charset="UTF-8">
+                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Evolve</title>
+
+                  <!-- 
+                    - favicon
+                  -->
+                  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+                  <!-- 
+                    - custom css link
+                  -->
+                  <link rel="stylesheet" href="{% static 'L.css' %}">
+
+                  <!-- 
+                    - google font link
+                  -->
+                  <link rel="preconnect" href="https://fonts.googleapis.com">
+                  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                  <!-- Add this in the <head> -->
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+                  <link
+                    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+                    rel="stylesheet">
+
+                    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+                </head>
+              <header>
+                <body id="top">
+
+                  <div class="header">
+                <div class="navbar container">
+                  <div class="logo">EVOLVE</div>
+                  <ul class="navbar-list">
+                    <li><a class="navbar-link" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="navbar-link" href="{% url 'home' %}#service">Services</a></li>
+                    <li><a class="navbar-link" href="{% url 'home' %}#project">Project</a></li>
+                    <li><a class="navbar-link" href="{% url 'home' %}#about">About Us</a></li>
+                    <li><a class="navbar-link" href="{% url 'home' %}#blog">Blog</a></li>
+                    <li><a class="navbar-link" href="{% url 'home' %}#contact">Contact Us</a></li>
+                    <li><a class="btn btn-primary" href="{% url 'home' %}#contact">Get Started</a></li>
+                  </ul>
+                </div>
+              </div>
+              </header>
 
 
-    <!-- 
-      - custom css link
-    -->
-    <link rel="stylesheet" href="{% static 'b.css' %}">
+                  <section >
+                  <div class="container">
+                      <!-- Left: Full Blog Posts -->
+                      <div class="main-content">
+                          {% for post in posts %}
+                              <div class="blog-card">
+                                  <h2>
+                                      <a href="{% url 'blog_detail' slug=post.slug %}">
+                                          {{ post.title }}
+                                      </a>
+                                  </h2>
+                                  <p>{{ post.content|truncatewords:30 }}</p>
+                                  <small>Posted on {{ post.created_at|date:"F d, Y" }}</small>
+                              </div>
+                          {% empty %}
+                              <p>No blog posts available.</p>
+                          {% endfor %}
+                      </div>
 
-    <!-- 
-      - google font link
-    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet">
-  </head>
-<body>
-    
-    
+                      <!-- Right: Latest Blogs Sidebar -->
+                      <div class="sidebar">
+                          <h3>Latest Articles</h3>
+                          {% for post in posts %}
+                              <div class="snippet">
+                                  <p style="font-size: 12px;">{{ post.created_at|date:"F d, Y" }}</p>
+                                  <h4>
+                                      <a href="{% url 'blog_detail' slug=post.slug %}">
+                                          {{ post.title }}
+                                      </a>
+                                  </h4>
+                                  <p>{{ post.content|striptags|truncatewords:30 }}</p>
+                              </div>
+                          {% endfor %}
+                      </div>
+                  </div>
+
+
+
+                </section>
+              
+  <footer class="footer">
     <div class="container">
-        <!-- Left: Full Blog Posts -->
-        <div class="main-content">
-            {% for post in posts %}
-                <div class="blog-card">
-                    <h2>
-                        <a href="{% url 'blog_detail' slug=post.slug %}">
-                            {{ post.title }}
-                        </a>
-                    </h2>
-                    <p>{{ post.content|truncatewords:30 }}</p>
-                    <small>Posted on {{ post.created_at|date:"F d, Y" }}</small>
-                </div>
-            {% empty %}
-                <p>No blog posts available.</p>
-            {% endfor %}
-        </div>
 
-        <!-- Right: Latest Blogs Sidebar -->
-        <div class="sidebar">
-            <h3>Latest Articles</h3>
-            {% for post in posts %}
-                <div class="snippet">
-                    <p style="font-size: 12px;">{{ post.created_at|date:"F d, Y" }}</p>
-                    <h4>
-                        <a href="{% url 'blog_detail' slug=post.slug %}">
-                            {{ post.title }}
-                        </a>
-                    </h4>
-                    <p>{{ post.content|striptags|truncatewords:30 }}</p>
-                </div>
-            {% endfor %}
-        </div>
+      <!-- Floating WhatsApp and Instagram -->
+      <div class="floating-social">
+        <a href="https://wa.me/9319552561" target="_blank" class="whatsapp" aria-label="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/evolve_solution?igsh=MW53NnltdzU4MjJkdg==" target="_blank" class="instagram" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+
+      <!-- Footer Social Media Links -->
+      <div class="social-links">
+        <a href="https://wa.me/9319552561" target="_blank" class="social-icon" aria-label="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+
+        <a href="https://facebook.com/evolve_solution" target="_blank" class="social-icon" aria-label="Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+
+        <a href="https://x.com/evolve_solution" target="_blank" class="social-icon" aria-label="X">
+          <div class="x-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 122" width="30" height="30" fill="currentColor">
+              <path d="M86.29 0H120L74.84 52.36L120 122H83.94L52.01 77.95L14.93 122H0L47.39 66.6L0 0h38.19l28.58 39.26L86.29 0Z"/>
+            </svg>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/evolve_solution?igsh=MW53NnltdzU4MjJkdg==" target="_blank" class="social-icon" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="https://www.linkedin.com/company/evolve_solution" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+
     </div>
-</body>
-</html>
+      <!-- Copyright -->
+      <div>
+      <p class="copyright">
+        &copy; 2025 All Rights Reserved by <a href="#" class="copyright-link">evolve</a>
+      </p>
+      </div>
+    
 
-      <style> 
+  </footer>
 
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .container {
-            display: flex;
-            gap: 30px;
-        }
-
-        .main-content {
-            width: 70%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .blog-card {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .blog-card h2 {
-            margin-top: 0;
-        }
-
-        .blog-card a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .blog-card a:hover {
-            color: #007BFF;
-        }
-
-        .sidebar {
-            width: 30%;
-            background-color: #f8f8f8;
-            padding: 15px;
-            border-radius: 10px;
-            height: fit-content;
-        }
-
-        .sidebar h3 {
-            margin-top: 0;
-        }
-
-        .sidebar .snippet {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .snippet h4 {
-            margin: 5px 0;
-        }
-
-        .snippet a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .snippet a:hover {
-            color: #007BFF;
-        }
-    </style> 
+              </body>
+              </html>

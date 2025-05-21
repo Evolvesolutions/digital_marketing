@@ -7,95 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Web Development</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9fafa;
-      margin: 0;
-      padding: 0;
-    }
-    .header {
-      background: linear-gradient(135deg, #000000, #000000);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .image-wrapper {
-    text-align: center;
-    }
-    .card img.icon {
-      width: 800px;
-      margin-bottom: 20px;
-    }
-    h2 {
-      color: #0aa98d;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #555;
-      line-height: 1.6;
-    }
-    ul {
-      padding-left: 20px;
-      color: #333;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    .cta-button {
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: linear-gradient(135deg, #ff6a00, #ee0979);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background: linear-gradient(135deg, #ee0979, #ff6a00);
-    }
+  
+  <link rel="stylesheet" href="{% static 'service.css' %}">
 
-    .image-section {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .image-section img {
-      width: 20%;
-      max-width: 1500px;
-      border-radius: 12px;
-    }
-    footer {
-      background-color: #0cc3aa;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 5px solid #00b894;
-    }
-  </style>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
 </head>
 <body>
 
@@ -131,8 +49,11 @@
       <p>
         We blend creativity with code to create high-performance websites that elevate your brand. From design to deployment, our team ensures every line of code serves your business goals. Fast, secure, and beautifully functional—that’s our promise.
       </p>
-
+     <a href="{% url 'home'%}#contact"></a>
       <button class="cta-button">Get Your Free Website Performance Audit</button>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Go Back Home </a>
+     </a>
+    
     </div>
 
     <div class="image-section">
@@ -141,8 +62,55 @@
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 evolve | All Rights Reserved</p>
+    <footer class="footer">
+    <div class="container">
+
+      <!-- Floating WhatsApp and Instagram -->
+      <div class="floating-social">
+        <a href="https://wa.me/9319552561" target="_blank" class="whatsapp" aria-label="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/evolve_solution?igsh=MW53NnltdzU4MjJkdg==" target="_blank" class="instagram" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+
+      <!-- Footer Social Media Links -->
+      <div class="social-links">
+        <a href="https://wa.me/9319552561" target="_blank" class="social-icon" aria-label="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+
+        <a href="https://facebook.com/evolve_solution" target="_blank" class="social-icon" aria-label="Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+
+        <a href="https://x.com/evolve_solution" target="_blank" class="social-icon" aria-label="X">
+          <div class="x-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 122" width="30" height="30" fill="currentColor">
+              <path d="M86.29 0H120L74.84 52.36L120 122H83.94L52.01 77.95L14.93 122H0L47.39 66.6L0 0h38.19l28.58 39.26L86.29 0Z"/>
+            </svg>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/evolve_solution?igsh=MW53NnltdzU4MjJkdg==" target="_blank" class="social-icon" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="https://www.linkedin.com/company/evolve_solution" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+
+    </div>
+      <!-- Copyright -->
+      <div>
+      <p class="copyright">
+        &copy; 2025 All Rights Reserved by <a href="#" class="copyright-link">evolve</a>
+      </p>
+      </div>
+    
+
   </footer>
 
 </body>
